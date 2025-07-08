@@ -1,0 +1,220 @@
+/* Estilos Generales NAV  FOOTER  y Variables*/
+
+:root {
+  --valorant-red: #ff4655;
+  --valorant-dark: #0f1923;
+  --valorant-light: #ece8e1;
+  --valorant-accent: #bd3944;
+  --valorant-blue: #12b2e3;
+  --valorant-shadow: 0 0 1px #fff,
+    0 0 3px #fff,
+    0 0 6px #f2fc70,
+    0 0 12px #89ffeb;
+    
+}
+
+
+
+@font-face {
+    font-family: "Logo";
+    src: url("../Font/KaushanScript-Regular.ttf");
+} 
+
+body {
+  font-family: 'DIN Next', 'Segoe UI', sans-serif;
+  background-color: var(--valorant-blue);
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+ 
+}
+
+/* Header */
+.logo a{
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.logo h1:hover{
+  text-shadow:  0 0 5px #fff,
+    0 0 8px #fff,
+    0 0 15px var(--valorant-red),
+    0 0 30px var(--valorant-red),
+    0 0 40px var(--valorant-red);;
+}
+
+.logo-link:hover{
+  transform: scale(1.1rem);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--valorant-dark);
+  color: var(--valorant-light);
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   z-index: 1000;
+   transform: translateZ(0);
+   will-change: transforn;
+  
+}
+
+.container-header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-family: "Logo";
+  color: var(--valorant-red);
+  text-shadow: 
+    0 0 3px #fff,
+    0 0 5px #fff,
+    0 0 10px var(--valorant-red),
+    0 0 20px var(--valorant-red),
+    0 0 30px var(--valorant-red);
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Navegación */
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: .5rem auto;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.nav li {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.nav a {
+  color: var(--valorant-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0.5rem 0;
+
+}
+
+.nav a:hover {
+  color: var(--valorant-red);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--valorant-red);
+  transition: width 0.3s;
+}
+
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Submenús */
+.nav ul ul {
+  padding: 2px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--valorant-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid var(--valorant-red);
+}
+
+.nav li:hover > ul {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.nav ul ul li {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* Footer */
+footer {
+
+  background-color: var(--valorant-dark);
+  color: var(--valorant-light);
+  padding: 2rem 0;
+  margin-top: 1rem;
+}
+
+.enlaces-footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  flex-wrap: wrap;
+}
+
+.enlaces-footer li {
+  margin: 0 1rem;
+}
+
+.enlaces-footer a {
+  color: var(--valorant-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.enlaces-footer a:hover {
+  color: var(--valorant-red);
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.redes-sociales img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.2);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+

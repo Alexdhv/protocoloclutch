@@ -1,0 +1,225 @@
+/* mapa.css - Estilo para la página de Bind */
+
+/* Estilos base (mobile-first) */
+.main-map {
+    padding: 1rem;
+    background-color: #0f1923;
+    color: #ece8e1;
+}
+
+.map-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.map-header h2 {
+    color: var(--valorant-red);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container-map {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container-map img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.tarjeta {
+    background-color: #1a2634;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid var(--valorant-red);
+}
+
+.tarjeta p {
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+.tarjeta strong {
+    color: var(--valorant-red);
+}
+
+.callouts, .strats, .map-reveal {
+    margin: 2rem 0;
+}
+
+.callouts h2, .strats h2, .map-reveal h2 {
+    color: var(--valorant-red);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--valorant-red);
+}
+
+.callouts img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.callouts p {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.strat-card {
+    background-color: #1a2634;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid var(--valorant-red);
+}
+
+.strat-card h3 {
+    color: var(--valorant-blue);
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.strat-card p {
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+.strat-card strong {
+    color: var(--valorant-red);
+}
+
+.strat-card ul {
+    padding-left: 1.2rem;
+}
+
+.strat-card li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.map-reveal {
+    text-align: center;
+}
+
+.map-reveal p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.video-reveal {
+    width: 100%;
+    height: 215px;
+    border-radius: 8px;
+    border: 2px solid var(--valorant-red);
+}
+
+/* Media Queries - Tabletas (769px en adelante) */
+@media (min-width: 769px) {
+    .main-map {
+        padding: 2rem;
+    }
+    
+    .container-map {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .container-map img {
+        width: 60%;
+    }
+    
+    .tarjeta {
+        width: 35%;
+        margin-top: 0;
+    }
+    
+    .callouts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .callouts h2 {
+        grid-column: 1 / -1;
+    }
+    
+    .strats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .strats h2 {
+        grid-column: 1 / -1;
+    }
+    
+    .strat-card {
+        margin-bottom: 0;
+    }
+    
+    .video-reveal {
+        height: 400px;
+    }
+}
+
+/* Media Queries - Desktop (1024px en adelante) */
+@media (min-width: 1024px) {
+    .main-map {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 3rem;
+    }
+    
+    .container-map img {
+        width: 70%;
+    }
+    
+    .tarjeta {
+        width: 25%;
+        padding: 2rem;
+    }
+    
+    .callouts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .strats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .strat-card:last-child {
+        grid-column: 1 / -1;
+    }
+    
+    .video-reveal {
+        height: 500px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* Animaciones y efectos */
+.container-map img:hover, .callouts img:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.strat-card:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(255, 70, 85, 0.2);
+}
+
+.tarjeta:hover {
+    box-shadow: 0 8px 16px rgba(18, 178, 227, 0.2);
+}

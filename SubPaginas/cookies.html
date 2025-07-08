@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies - Protocolo Clutch</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <style>
+        .cookie-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        
+        .cookie-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e63946;
+            padding-bottom: 15px;
+        }
+        
+        .cookie-section {
+            margin-bottom: 25px;
+        }
+        
+        .cookie-section h2 {
+            color: #1d3557;
+            border-left: 4px solid #e63946;
+            padding-left: 10px;
+        }
+        
+        .cookie-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .cookie-type {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .cookie-controls {
+            background: #e63946;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .cookie-btn {
+            background: white;
+            color: #e63946;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Mismo header que en index.html -->
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="cookie-container">
+                <div class="cookie-header">
+                    <h1>Política de Cookies</h1>
+                    <p>Última actualización: 23 de junio de 2024</p>
+                </div>
+                
+                <div class="cookie-section">
+                    <h2>¿Qué son las cookies?</h2>
+                    <p>Las cookies son pequeños archivos de texto que los sitios web colocan en tu dispositivo cuando los visitas. Son ampliamente usados para hacer que los sitios web funcionen, o funcionen más eficientemente, así como para proporcionar información a los propietarios del sitio.</p>
+                </div>
+                
+                <div class="cookie-section">
+                    <h2>Tipos de cookies que utilizamos</h2>
+                    <div class="cookie-types">
+                        <div class="cookie-type">
+                            <h3>Esenciales</h3>
+                            <p>Necesarias para el funcionamiento básico del sitio. Permiten la navegación y el uso de funciones esenciales.</p>
+                        </div>
+                        <div class="cookie-type">
+                            <h3>Rendimiento</h3>
+                            <p>Recogen información sobre cómo usas el sitio (páginas visitadas, errores) para mejorarlo.</p>
+                        </div>
+                        <div class="cookie-type">
+                            <h3>Funcionalidad</h3>
+                            <p>Recuerdan tus preferencias (idioma, región) para ofrecerte una experiencia personalizada.</p>
+                        </div>
+                        <div class="cookie-type">
+                            <h3>Publicidad</h3>
+                            <p>Se usan para mostrar anuncios relevantes basados en tus intereses y limitar el número de veces que ves un anuncio.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cookie-section">
+                    <h2>Cookies de terceros</h2>
+                    <p>Utilizamos servicios de terceros como Google Analytics para entender cómo interactúas con nuestro sitio. Estos servicios pueden usar cookies propias para recopilar información según sus propias políticas de privacidad.</p>
+                </div>
+                
+                <div class="cookie-section">
+                    <h2>Control de cookies</h2>
+                    <p>Puedes controlar y/o eliminar las cookies como desees. Puedes eliminar todas las cookies que ya están en tu equipo y configurar la mayoría de los navegadores para impedir que se instalen.</p>
+                    <p>Sin embargo, si lo haces, puede que tengas que ajustar manualmente algunas preferencias cada vez que visites un sitio y que algunos servicios o funcionalidades no trabajen.</p>
+                </div>
+                
+                <div class="cookie-controls">
+                    <h3>Preferencias de cookies</h3>
+                    <p>Selecciona qué tipos de cookies aceptas:</p>
+                    <button class="cookie-btn" onclick="acceptAll()">Aceptar todas</button>
+                    <button class="cookie-btn" onclick="acceptEssential()">Solo necesarias</button>
+                    <button class="cookie-btn" onclick="rejectAll()">Rechazar todas</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script>
+        function acceptAll() {
+            alert("Has aceptado todas las cookies. ¡Gracias!");
+            // Aquí iría el código real para configurar las cookies
+        }
+        
+        function acceptEssential() {
+            alert("Has aceptado solo las cookies esenciales.");
+            // Código para configurar solo cookies esenciales
+        }
+        
+        function rejectAll() {
+            alert("Has rechazado todas las cookies excepto las esenciales.");
+            // Código para rechazar cookies no esenciales
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Protocolo Clutch</title>
+    <link rel="stylesheet" href="../css/EstiloGeneral.css">
+    <link rel="stylesheet" href="../css/EstiloContacto.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container-header">
+            <div class="logo">
+                <a href="../PortocoloClutch.html">
+                <h1>Protocolo Clutch</h1></a>
+                <p>Tu portal de Valorant y videojuegos</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../PortocoloClutch.html">Inicio</a></li>                  
+                    <li><a href="#">Valorant</a>
+                    <ul>
+                        <li><a href="actualizaciones.html">Actualizaciones</a></li>
+                        <li><a href="agentes.html">Agentes</a></li>
+                        <li><a href="mapas.html">Mapas</a></li>
+                       
+                    </ul></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+           
+        </div>
+    </header>
+
+    <main class="main-contact">
+        <div class="container">
+            <h1>Contacta con Nosotros</h1>
+            <p>¿Tienes preguntas, sugerencias o quieres colaborar con nosotros? ¡Escríbenos!</p>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto:</label>
+                            <select id="subject" name="subject">
+                                <option value="general">Comentario</option>
+                                <option value="collab">Colaboración</option>
+                                <option value="advertising">Publicidad</option>
+                                <option value="technical">Problema técnico</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h3>Correo Electrónico</h3>
+                            <p>alhevi94@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>Redes Sociales</h3>
+                            <p>Síguenos para las últimas actualizaciones</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/groups/VALORANTLAT/?locale=es_LA"><img src="../Imagenes/Redes Sociales/facebook.png" alt="Facebook"></a>
+                        <a href="https://x.com/vcl_latam?lang=es"><img src="../Imagenes/Redes Sociales/Twitter.png" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/valorantlatam/ "><img src="../Imagenes/Redes Sociales/instagram.png" alt="Instagram"></a>
+                        <a href="https://m.youtube.com/c/Valorantlatam"><img src="../Imagenes/Redes Sociales/youtube.png" alt="YouTube"></a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🏢</div>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Calle del Videojuego, 123<br>
+                            Tehuacan, Puebla</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="enlaces-footer">
+            <ul>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="politica.html">Política de Privacidad</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                
+            </ul>
+        </div>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/groups/VALORANTLAT/?locale=es_LA"><img src="../Imagenes/Redes Sociales/facebook.png" alt="Facebook"></a>
+            <a href="https://x.com/vcl_latam?lang=es"><img src="../Imagenes/Redes Sociales/Twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/valorantlatam/ "><img src="../Imagenes/Redes Sociales/instagram.png" alt="Instagram"></a>
+            <a href="https://m.youtube.com/c/Valorantlatam"><img src="../Imagenes/Redes Sociales/youtube.png" alt="YouTube"></a>
+        </div>
+        <div class="copyright">
+            <p>© Protocolo Clucht. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

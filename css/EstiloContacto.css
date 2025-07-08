@@ -1,0 +1,276 @@
+.main-contact {
+  padding: 1rem;
+  background-color: var(--valorant-blue);
+  min-height: calc(100vh - 300px);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  color: var(--valorant-red);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--valorant-red);
+}
+
+.container > p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--valorant-dark);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--valorant-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(18, 178, 227, 0.2);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: var(--valorant-red);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--valorant-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 70, 85, 0.3);
+}
+
+.contact-info {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: var(--valorant-dark);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.contact-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--valorant-blue);
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--valorant-blue);
+}
+
+.contact-method h3 {
+  color: var(--valorant-dark);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-method p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Tablets (769px+) */
+@media (min-width: 769px) {
+  .main-contact {
+    padding: 2rem;
+  }
+  
+  .container h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-container {
+    flex-direction: row;
+  }
+  
+  .contact-form,
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-method h3 {
+    font-size: 1.2rem;
+  }
+  
+  .contact-method p {
+    font-size: 1rem;
+  }
+}
+
+/* PC (1024px+) */
+@media (min-width: 1024px) {
+  .container h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .container > p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-container {
+    gap: 3rem;
+  }
+  
+  .contact-form,
+  .contact-info {
+    padding: 2rem;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+  }
+  
+  .submit-btn {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Efectos especiales para desktop */
+  .contact-form,
+  .contact-info {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .contact-form:hover,
+  .contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .contact-method {
+    transition: transform 0.3s;
+  }
+  
+  .contact-method:hover {
+    transform: translateX(5px);
+  }
+  
+  .contact-icon {
+    transition: transform 0.3s;
+  }
+  
+  .contact-method:hover .contact-icon {
+    transform: scale(1.2);
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-form,
+.contact-info {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.contact-info {
+  animation-delay: 0.2s;
+}

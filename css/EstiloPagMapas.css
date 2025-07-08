@@ -1,0 +1,125 @@
+/* Estilos para la sección de Mapas */
+@font-face {
+  font-family: "tarjeta";
+  src: url(../Font/KaushanScript-Regular.ttf);
+}
+body{
+  background: linear-gradient(135deg, var(--valorant-blue) 0%, #1a2a3a 100%);
+}
+
+.main-map {
+  font-family: "tarjeta",sans-serif;
+  background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header-map {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--valorant-red);
+  padding-bottom: 1rem;
+}
+
+.header-map h2 {
+  text-shadow: 
+    0 0 3px rgba(255, 255, 255, 0.2),
+    0 0 5px rgba(165, 173, 182, 0.8);
+  color: var(--valorant-blue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header-map p {
+  color: var(--valorant-light);
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.maps::before{
+    content: "";
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--valorant-red), transparent);
+  margin: 1.5rem 0;
+}
+
+.map-card{
+  background: rgba(26, 42, 58, 0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-top: 3px solid var(--valorant-red);
+}
+
+.map-card:hover{
+  text-shadow: 
+    0 0 3px rgba(240, 240, 240, 0.8),
+    0 0 5px rgba(240, 240, 240, 0.6),
+    0 0 10px var(--valorant-red),
+    0 0 30px var(--valorant-red);
+    transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 70, 85, 0.3);
+}
+
+
+
+.map-card h3{
+  color: var(--valorant-light);
+  background: rgba(15, 25, 35, 0.8);
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.map-card img{
+    width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.map-card:hover img{
+    transform: scale(1.1);
+}
+
+.map-link{
+    text-decoration: none;
+
+}
+
+.map-link:hover{
+     color: var(--valorant-red);
+}
+
+.map-card::after{
+    content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 70, 85, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .maps{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .maps{
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}

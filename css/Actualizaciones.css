@@ -1,0 +1,142 @@
+.main {
+  padding: 1rem;
+   background: rgba(15, 25, 35, 0.8);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.updates {
+  margin-top: 2rem;
+}
+
+.updates h2 {
+  color: var(--valorant-red);
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.updates h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--valorant-red);
+}
+
+.update {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.update:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.update h3 {
+  color: var(--valorant-dark);
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.update p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.update p strong {
+  color: var(--valorant-accent);
+}
+
+/* Tablets (769px+) */
+@media (min-width: 769px) {
+  .main {
+    padding: 2rem;
+  }
+  
+  .updates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .updates h2 {
+    grid-column: 1 / -1;
+    font-size: 2.2rem;
+  }
+  
+  .update {
+    margin-bottom: 0;
+  }
+}
+
+/* PC (1024px+) */
+@media (min-width: 1024px) {
+  .updates {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .update:nth-child(2) {
+    grid-column: span 2;
+  }
+  
+  .update h3 {
+    font-size: 1.4rem;
+  }
+  
+  .update p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Efectos especiales para todos los dispositivos */
+.update {
+  position: relative;
+  overflow: hidden;
+}
+
+.update::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--valorant-red);
+  transition: width 0.3s ease;
+}
+
+.update:hover::before {
+  width: 10px;
+}
+
+.update h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--valorant-blue);
+  margin: 0.5rem 0;
+  transition: width 0.3s ease;
+}
+
+.update:hover h3::after {
+  width: 100px;
+}

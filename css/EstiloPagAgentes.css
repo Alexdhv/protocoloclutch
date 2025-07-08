@@ -1,0 +1,227 @@
+/* Estilos para la sección de Agentes */
+@font-face {
+  font-family: "tarjeta";
+  src: url(../Font/KaushanScript-Regular.ttf);
+}
+
+.main-agent {
+  font-family: "tarjeta",sans-serif;
+  background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header-agent {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--valorant-red);
+  padding-bottom: 1rem;
+}
+
+.header-agent h2 {
+  color: var(--valorant-blue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header-agent p {
+  color: var(--valorant-light);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos para las secciones de roles */
+.duelist, .initiator, .controller, .sentinel {
+  margin-bottom: 3rem;
+}
+
+
+
+/* Grid de agentes */
+.duelist, .initiator, .controller, .sentinel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjetas de agentes */
+.agente {
+  background: rgba(26, 42, 58, 0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-top: 3px solid var(--valorant-red);
+}
+
+.agente:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 70, 85, 0.3);
+}
+
+/* Estilos específicos por rol */
+.duelist .agente .rol {
+  border-top-color: #ff4655; /* Rojo para duelistas */
+}
+
+.initiator .agente {
+  border-top-color: #12b2e3; /* Azul para iniciadores */
+}
+
+.controller .agente {
+  border-top-color: #8a4fff; /* Púrpura para controladores */
+}
+
+.sentinel .agente {
+  border-top-color: #ffeb3b; /* Amarillo para centinelas */
+}
+
+.agente h3 {
+  color: var(--valorant-light);
+  background: rgba(15, 25, 35, 0.8);
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.agente img {
+  width: 100%;
+ 
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.agente:hover img {
+  transform: scale(1.05);
+}
+
+.agente p {
+  color: var(--valorant-light);
+  padding: 1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background: rgba(15, 25, 35, 0.6);
+}
+
+.rol{
+  writing-mode: sideways-lr;
+  letter-spacing: .5rem;
+ 
+  text-shadow: var(--valorant-shadow);
+  font-size: 5rem;
+  text-align: center;
+  
+}
+
+.duelist .rol{
+  color: var(--valorant-red);
+}
+
+.initiator .rol{
+  color: var(--valorant-blue);
+}
+
+.controller .rol{
+  color: #8a4fff;
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+.sentinel .rol{
+  color: #857c32;
+
+}
+
+
+
+/* Efecto hover para resaltar */
+.agente::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 70, 85, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.agente:hover::after {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .duelist, .initiator, .controller, .sentinel {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    writing-mode: horizontal-tb;
+  }
+  
+}
+
+@media (max-width: 480px) {
+ 
+ 
+  .header-agent h2 {
+    font-size: 1.5rem;
+  }
+   
+    .rol{
+   font-size: .5em;
+   letter-spacing: 0;
+    writing-mode: horizontal-tb;
+  }
+  
+}
+/* Estilos para los enlaces de agentes */
+.agente-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.agente-link h3 {
+  color: var(--valorant-light) !important;
+  transition: color 0.3s;
+}
+
+.agente-link:hover h3 {
+  color: var(--valorant-red) !important;
+}
+
+/* Mantener el efecto hover en la tarjeta completa */
+.agente {
+  position: relative;
+  overflow: hidden;
+}
+
+.agente-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Ajustes para mantener la interactividad visual */
+.agente:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 70, 85, 0.3);
+}
+
+.agente:hover img {
+  transform: scale(1.05);
+}

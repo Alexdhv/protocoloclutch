@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "comic";
+  src: url(../Font/ComicRelief-Regular.ttf);
+}
+.main-agent {
+  padding: 1rem;
+  font-family: "comic", sans-serif;
+  background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 100%);
+  color: var(--valorant-light);
+}
+
+/* Tarjeta holográfica para el header del agente */
+.agent-header {
+  background: rgba(15, 25, 35, 0.8);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(18, 178, 227, 0.3);
+  border: 1px solid var(--valorant-blue);
+}
+
+.agent-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    transparent 45%,
+    rgba(18, 178, 227, 0.1) 50%,
+    transparent 55%
+  );
+  animation: hologram 6s linear infinite;
+  z-index: 1;
+}
+
+@keyframes hologram {
+  0% { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(360deg) translateY(50px); }
+}
+
+.agent-header h2 {
+  color: var(--valorant-blue);
+  text-shadow: var(--valorant-shadow);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.container-agent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.container-agent img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 2px solid var(--valorant-red);
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.3);
+}
+
+.tarjeta {
+  background: rgba(15, 25, 35, 0.9);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--valorant-red);
+  width: 100%;
+}
+
+.tarjeta p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.nombre, .nacionalidad, .rol, .clase {
+  color: var(--valorant-light);
+}
+
+.nombre strong, .nacionalidad strong, 
+.rol strong, .clase strong {
+  color: var(--valorant-blue);
+}
+
+/* Sección de lore */
+.lore {
+  background: rgba(26, 42, 58, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-top: 3px solid var(--valorant-red);
+}
+
+.biography h3 {
+  color: var(--valorant-red);
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.biography h4 {
+  color: var(--valorant-blue);
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.biography ul {
+  padding-left: 1.2rem;
+}
+
+.biography li {
+  margin-bottom: 0.5rem;
+}
+
+/* Gameplay section */
+.gameplay {
+  margin-bottom: 2rem;
+}
+
+.gameplay h3 {
+  color: var(--valorant-red);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gamplay-agent {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  border: 2px solid var(--valorant-blue);
+}
+
+/* Habilidades */
+.abilities-container {
+  margin-top: 2rem;
+}
+
+.abilities-container h1 {
+  color: var(--valorant-red);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--valorant-blue);
+  padding-bottom: 0.5rem;
+}
+
+.ability {
+  background: rgba(15, 25, 35, 0.8);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--valorant-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.ability::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--valorant-red), var(--valorant-blue));
+}
+
+.ability-name {
+  color: var(--valorant-blue);
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+
+.ability-video {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  border: 1px solid var(--valorant-red);
+}
+
+.ability-type {
+  display: inline-block;
+  background: var(--valorant-red);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.ability-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ability-icon {
+    height: 1.5rem; /* Misma altura que el font-size del ability-name */
+    width: auto;
+    margin-left: 0.5rem;
+}
+
+.ability:hover .ability-icon{
+  filter: drop-shadow(2px 4px 6px rgb(252, 202, 36));
+  transform: scale(1.5);
+}
+
+.ability:hover h2{
+filter: drop-shadow(2px 4px 6px rgba(123, 213, 248, 0.61));
+   
+}
+
+.lore-description {
+  font-style: italic;
+  color: #8a9ba8;
+  border-left: 2px solid var(--valorant-blue);
+  padding-left: 0.8rem;
+  margin: 0.8rem 0;
+}
+
+/* ========= RESPONSIVE ========= */
+
+/* Tabletas (769px - 1023px) */
+@media (min-width: 769px) {
+  .main-agent {
+    padding: 2rem;
+  }
+  
+  .container-agent {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .container-agent img {
+    width: 50%;
+    max-width: 350px;
+  }
+  
+  .tarjeta {
+    width: 50%;
+  }
+  
+  .gamplay-agent {
+    height: 350px;
+  }
+  
+  .abilities-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .ability {
+    margin-bottom: 0;
+  }
+}
+
+/* PC (1024px+) */
+@media (min-width: 1024px) {
+  .main-agent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+  }
+  
+  .agent-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .container-agent img {
+    max-width: 400px;
+  }
+  
+  .gamplay-agent {
+    height: 450px;
+  }
+  
+  .abilities-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .ability:nth-child(4) {
+    grid-column: span 3;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Efecto especial para la definitiva */
+  .ability:nth-child(4) {
+    border: 1px solid var(--valorant-red);
+    box-shadow: 0 0 20px rgba(255, 70, 85, 0.5);
+  }
+  
+  .ability:nth-child(4)::after {
+    height: 3px;
+    background: linear-gradient(90deg, var(--valorant-red), #ff4655, var(--valorant-blue));
+  }
+}
